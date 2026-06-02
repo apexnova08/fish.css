@@ -8,7 +8,7 @@ const cssMap =
     //wtf: "funstuff/wtf.css",
 };
 
-const hash = window.location.hash.slice(1);
+const hash = window.location.hash.slice(1).replace(/\/+/g, "").trim();
 const css = cssMap[hash] || cssMap.main;
 
 const link = document.createElement("link");
