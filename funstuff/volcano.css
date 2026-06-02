@@ -1,0 +1,296 @@
+/* =========================
+   DEEP ABYSS PREDATOR MODE 🐙🌑
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    font-family: "Segoe UI", sans-serif;
+
+    background:
+        radial-gradient(circle at 50% 30%, #001018, #000000 70%),
+        radial-gradient(circle at 20% 80%, rgba(255, 0, 80, 0.08), transparent 40%);
+
+    color: #d7f0ff;
+    overflow-x: hidden;
+
+    animation: abyssPulse 8s infinite;
+}
+
+/* slow “something is watching” pulse */
+@keyframes abyssPulse {
+    0%   { filter: brightness(1) contrast(1); }
+    50%  { filter: brightness(1.2) contrast(1.3) hue-rotate(10deg); }
+    100% { filter: brightness(1) contrast(1); }
+}
+
+/* =========================
+   GLOBAL HOVER DISTURBANCE
+   ========================= */
+
+body:hover {
+    animation: subtleShake 0.3s infinite;
+}
+
+@keyframes subtleShake {
+    0%   { transform: translate(0px, 0px); }
+    25%  { transform: translate(1px, -1px); }
+    50%  { transform: translate(-1px, 1px); }
+    75%  { transform: translate(1px, 1px); }
+    100% { transform: translate(0px, 0px); }
+}
+
+/* =========================
+   HEADINGS = “TARGET LOCKED”
+   ========================= */
+
+h1, h2, h3, h4 {
+    color: #b9f2ff;
+    text-shadow:
+        0 0 10px rgba(0, 200, 255, 0.5),
+        0 0 20px rgba(255, 0, 80, 0.2);
+
+    transition: all 0.2s ease;
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover {
+    color: #ffffff;
+    text-shadow:
+        0 0 12px #00e5ff,
+        0 0 25px #ff0040;
+
+    transform: scale(1.05) skewX(-2deg);
+}
+
+/* =========================
+   LINKS = “PREDATORY TRACE”
+   ========================= */
+
+a {
+    color: #7df9ff;
+    text-decoration: none;
+    position: relative;
+
+    transition: all 0.2s ease;
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    background: radial-gradient(circle, rgba(255,0,80,0.15), transparent 60%);
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+/* aggressive lock-on hover */
+a:hover {
+    color: #ffffff;
+    letter-spacing: 1px;
+    transform: translateX(4px);
+    text-shadow:
+        0 0 8px #00e5ff,
+        0 0 20px #ff0040;
+}
+
+a:hover::before {
+    opacity: 1;
+}
+
+/* =========================
+   CARDS = “HUNTED OBJECTS”
+   ========================= */
+
+.card {
+    background: rgba(0, 20, 30, 0.7);
+    border: 1px solid rgba(0, 255, 255, 0.15);
+
+    padding: 18px;
+    margin: 16px 0;
+    border-radius: 14px;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: all 0.2s ease;
+}
+
+/* scanning overlay */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(255, 0, 80, 0.15) 45%,
+        transparent 60%
+    );
+
+    transform: translateX(-100%);
+}
+
+/* PREDATOR RESPONSE */
+.card:hover {
+    transform: scale(1.03) translateY(-4px);
+    border-color: rgba(255, 0, 80, 0.5);
+
+    box-shadow:
+        0 0 15px rgba(0, 255, 255, 0.2),
+        0 0 30px rgba(255, 0, 80, 0.25);
+
+    animation: cardTwitch 0.2s infinite;
+}
+
+.card:hover::before {
+    animation: scan 0.8s linear infinite;
+}
+
+@keyframes scan {
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes cardTwitch {
+    0%   { transform: translate(0, 0) scale(1.03); }
+    25%  { transform: translate(1px, -1px) scale(1.03); }
+    50%  { transform: translate(-1px, 1px) scale(1.03); }
+    75%  { transform: translate(1px, 1px) scale(1.03); }
+    100% { transform: translate(0, 0) scale(1.03); }
+}
+
+/* =========================
+   BUTTONS = “AGGRESSION NODE”
+   ========================= */
+
+button {
+    background: linear-gradient(135deg, #00e5ff, #ff0040);
+    border: none;
+
+    padding: 10px 14px;
+    border-radius: 999px;
+
+    color: #001018;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    position: relative;
+    transition: all 0.15s ease;
+
+    box-shadow:
+        0 0 10px rgba(0, 255, 255, 0.2),
+        0 0 20px rgba(255, 0, 80, 0.2);
+}
+
+/* aggressive reaction field */
+button::after {
+    content: "";
+    position: absolute;
+    inset: -10px;
+
+    border-radius: inherit;
+    background: radial-gradient(circle, rgba(255,0,80,0.3), transparent 60%);
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+/* “DO NOT TOUCH” response */
+button:hover {
+    transform: scale(1.12) rotate(-1deg);
+    filter: brightness(1.3);
+    box-shadow:
+        0 0 20px rgba(0, 255, 255, 0.3),
+        0 0 40px rgba(255, 0, 80, 0.35);
+
+    animation: buttonShake 0.15s infinite;
+}
+
+button:hover::after {
+    opacity: 1;
+}
+
+@keyframes buttonShake {
+    0%   { transform: translate(0, 0) scale(1.12); }
+    25%  { transform: translate(2px, -1px) scale(1.12); }
+    50%  { transform: translate(-2px, 1px) scale(1.12); }
+    75%  { transform: translate(1px, 2px) scale(1.12); }
+    100% { transform: translate(0, 0) scale(1.12); }
+}
+
+/* =========================
+   INPUTS = “BIOLOGICAL DEFENSE RESPONSE”
+   ========================= */
+
+input, textarea, select {
+    background: rgba(0, 10, 20, 0.8);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    color: #d7f0ff;
+
+    padding: 8px;
+    border-radius: 10px;
+
+    transition: all 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #ff0040;
+    box-shadow:
+        0 0 12px rgba(255, 0, 80, 0.4),
+        0 0 20px rgba(0, 255, 255, 0.2);
+
+    transform: scale(1.02);
+}
+
+/* =========================
+   TABLES = “SCAN GRID”
+   ========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    background: rgba(0, 20, 30, 0.5);
+}
+
+td, th {
+    border: 1px solid rgba(0, 255, 255, 0.15);
+    padding: 10px;
+
+    transition: all 0.2s ease;
+}
+
+tr:hover td {
+    background: rgba(255, 0, 80, 0.08);
+    transform: scale(1.01);
+}
+
+/* =========================
+   AMBIENT “TRACKING NOISE”
+   ========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle, rgba(255,0,80,0.08) 2px, transparent 3px),
+        radial-gradient(circle, rgba(0,255,255,0.06) 2px, transparent 3px);
+
+    background-size: 70px 70px, 110px 110px;
+
+    animation: drift 12s linear infinite;
+    opacity: 0.4;
+}
+
+@keyframes drift {
+    0%   { transform: translateY(0px); }
+    100% { transform: translateY(-250px); }
+}

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Test Page</title>
+
+    <link rel="stylesheet" href="fish.css" />
+</head>
+
+<body>
+
+<header>
+    <h1>Main Title (H1)</h1>
+    <p>This is a paragraph inside a header.</p>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section>
+        <h2>Typography Section</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet tortor porttitor, laoreet elit in, ullamcorper orci. Aliquam quis nunc et tortor bibendum scelerisque sed nec dolor. Nam vitae turpis volutpat, porta sapien at, mollis sem. Sed auctor lacus eget felis dignissim, a tristique lacus iaculis. Sed dui tellus, viverra vitae laoreet egestas, semper eu dui. Nunc tempus velit sit amet mattis luctus. Donec ullamcorper varius nisl, ut rhoncus dolor venenatis eget. Sed vel tempus nunc. Nam vehicula, massa dapibus maximus sagittis, elit ante ullamcorper massa, in rhoncus neque tellus quis magna. Ut porttitor semper sapien eget auctor. In hac habitasse platea dictumst.</p>
+
+        <br>
+        <p>
+            This is a normal paragraph with <strong>bold text</strong>,
+            <em>italic text</em>, and <a href="#">a link</a>.
+        </p>
+
+        <h3>H3 Heading</h3>
+        <h4>H4 Heading</h4>
+        <h5>H5 Heading</h5>
+        <h6>H6 Heading</h6>
+
+        <blockquote>
+            This is a blockquote. It should look distinct from normal text.
+        </blockquote>
+
+        <pre>
+function hello() {
+    console.log("Preformatted text block");
+}
+        </pre>
+
+        <code>const x = 10;</code>
+    </section>
+
+    <hr />
+
+    <section>
+        <h2>Lists</h2>
+
+        <ul>
+            <li>Unordered item 1</li>
+            <li>Unordered item 2
+                <ul>
+                    <li>Nested item</li>
+                </ul>
+            </li>
+        </ul>
+
+        <ol>
+            <li>Ordered item 1</li>
+            <li>Ordered item 2</li>
+        </ol>
+
+        <dl>
+            <dt>Term 1</dt>
+            <dd>Definition 1</dd>
+            <dt>Term 2</dt>
+            <dd>Definition 2</dd>
+        </dl>
+    </section>
+
+    <hr />
+
+    <section>
+        <h2>Table</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Alice</td>
+                    <td>24</td>
+                    <td>Developer</td>
+                </tr>
+                <tr>
+                    <td>Bob</td>
+                    <td>30</td>
+                    <td>Designer</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr />
+
+    <section>
+        <h2>Form Elements</h2>
+
+        <form>
+            <label>
+                Text Input:
+                <input type="text" placeholder="Enter text" />
+            </label>
+
+            <br />
+
+            <label>
+                Email:
+                <input type="email" placeholder="email@example.com" />
+            </label>
+
+            <br />
+
+            <label>
+                Password:
+                <input type="password" />
+            </label>
+
+            <br />
+
+            <label>
+                Number:
+                <input type="number" />
+            </label>
+
+            <br />
+
+            <label>
+                Date:
+                <input type="date" />
+            </label>
+
+            <br />
+
+            <label>
+                Color:
+                <input type="color" />
+            </label>
+
+            <br />
+
+            <label>
+                Range:
+                <input type="range" />
+            </label>
+
+            <br />
+
+            <label>
+                Checkbox:
+                <input type="checkbox" />
+            </label>
+
+            <br />
+
+            <label>
+                Radio:
+                <input type="radio" name="test" />
+                Option A
+                <input type="radio" name="test" />
+                Option B
+            </label>
+
+            <br />
+
+            <label>
+                Select:
+                <select>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                </select>
+            </label>
+
+            <br />
+
+            <label>
+                Textarea:
+                <textarea rows="4" cols="30"></textarea>
+            </label>
+
+            <br />
+
+            <button type="button">Normal Button</button>
+            <button type="submit">Submit Button</button>
+            <button type="reset">Reset Button</button>
+        </form>
+    </section>
+
+    <hr />
+
+    <section>
+        <h2>Media</h2>
+
+        <img src="https://via.placeholder.com/300" alt="Placeholder image" />
+
+        <br />
+
+        <audio controls>
+            <source src="" type="audio/mpeg">
+        </audio>
+
+        <br />
+
+        <video controls width="300">
+            <source src="" type="video/mp4">
+        </video>
+    </section>
+
+    <hr />
+
+    <section>
+        <h2>Cards / Div Layout</h2>
+
+        <div class="card">
+            <h3>Card Title</h3>
+            <p>This is a simple card component.</p>
+            <button>Action</button>
+        </div>
+
+        <div class="card">
+            <h3>Another Card</h3>
+            <p>Testing spacing and layout.</p>
+        </div>
+    </section>
+
+    <hr />
+
+    <aside>
+        <h2>Sidebar / Aside</h2>
+        <p>This is an aside section for secondary content.</p>
+    </aside>
+
+</main>
+
+<footer>
+    <p>Footer content © 2026</p>
+</footer>
+
+</body>
+</html>
