@@ -7,7 +7,7 @@
 <br>
 <br>
 
-### ⚓ Use this CSS
+### ⚓ Installation
 🐠 Main:
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/apexnova08/fish.css@main/fish.css">
