@@ -300,7 +300,7 @@ summary {
 ========================= */
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 7px;
 }
 
 ::-webkit-scrollbar-track {
@@ -309,5 +309,5 @@ summary {
 
 ::-webkit-scrollbar-thumb {
     background: var(--primary);
-    border-radius: 10px;
+    border-radius: 7px;
 }
