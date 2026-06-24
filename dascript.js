@@ -1,10 +1,7 @@
-document.querySelectorAll("table").forEach(table =>
-{
-    table.lazycssSortTable("th").forEach(th =>
-    {
-        th.addEventListener("click", function ()
-        {
-            sortTable(table, this.cellIndex);
+document.querySelectorAll("table").forEach(table => {
+    table.querySelectorAll("th").forEach(th => {
+        th.addEventListener("click", function () {
+            lazycssSortTable(table, this.cellIndex);
         });
     });
 });
@@ -12,21 +9,21 @@ document.querySelectorAll("table").forEach(table =>
 function lazycssSortTable(table, n)
 {
     const rows = Array.from(table.tBodies[0].rows);
-
-    const isAsc = table.dataset.column == n
-        ? table.dataset.asc !== "true"
-        : true;
+    const isAsc = table.dataset.column == n ? table.dataset.asc !== "true" : true;
 
     rows.sort((a, b) =>
     {
         const x = a.cells[n].textContent;
         const y = b.cells[n].textContent;
 
-        if (!isNaN(x) && !isNaN(y))
+        const nx = x.replace(/,/g, "");
+        const ny = y.replace(/,/g, "");
+
+        if (!isNaN(nx) && !isNaN(ny))
         {
             return isAsc
-                ? Number(x) - Number(y)
-                : Number(y) - Number(x);
+                ? nx - ny
+                : ny - nx;
         }
 
         return isAsc
