@@ -1,7 +1,7 @@
 ## ⚓ Fish.css
 <b>Fish.css</b> is a classless CSS framework that styles plain HTML into a <i>dark, aquatic-themed</i> UI with a clean, semantic-first design and no required classes.
 
-‼️<b><i>NOW WITH SORTABLE TABLES</i></b>‼️
+<i>‼️<b>NOW WITH SORTABLE TABLES</b>‼️</i>
 
 🌊 Check out the live preview <b>[HERE](https://apexnova08.github.io/fish.css/)</b>.
 <br>
