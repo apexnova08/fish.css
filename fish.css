@@ -198,8 +198,8 @@ th {
     cursor: pointer;
 }
 th::after { color: var(--text); font-size: 12px; }
-th.sort-asc::after { content: " ▲"; }
-th.sort-desc::after { content: " ▼"; }
+th.sort-asc::after { content: " | ▲"; }
+th.sort-desc::after { content: " | ▼"; }
 
 /* =========================
     Forms (core classless power)
