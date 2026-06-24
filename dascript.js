@@ -1,6 +1,6 @@
 document.querySelectorAll("table").forEach(table =>
 {
-    table.querySelectorAll("th").forEach(th =>
+    table.lazycssSortTable("th").forEach(th =>
     {
         th.addEventListener("click", function ()
         {
@@ -9,7 +9,7 @@ document.querySelectorAll("table").forEach(table =>
     });
 });
 
-function sortTable(table, n)
+function lazycssSortTable(table, n)
 {
     const rows = Array.from(table.tBodies[0].rows);
 
