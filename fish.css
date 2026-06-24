@@ -195,7 +195,11 @@ th, td {
 th {
     color: var(--primary);
     background: #0e2a3d;
+    cursor: pointer;
 }
+th::after { color: var(--text); }
+th.sort-asc::after { content: " ▲"; }
+th.sort-desc::after { content: " ▼"; }
 
 /* =========================
     Forms (core classless power)
