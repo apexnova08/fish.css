@@ -192,7 +192,7 @@ th {
     background: #0e2a3d;
     cursor: pointer;
 }
-th::after { color: var(--text); }
+th::after { color: var(--text); font-size: 12px; }
 th.sort-asc::after { content: " ▲"; }
 th.sort-desc::after { content: " ▼"; }
 
